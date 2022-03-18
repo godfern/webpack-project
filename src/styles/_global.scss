@@ -9,3 +9,18 @@ body {
 main {
     display: flex;
 }
+
+.banner {
+    background-image: url('../images/image2.jpg');
+    background-size: cover;
+    min-height: 200px;
+    width: 100%;
+}
+
+ul {
+    list-style-image: url('../images/image3.svg');
+}
+
+li {
+    margin-left: 100px;
+}

@@ -7,6 +7,9 @@ if (process.env.NODE_ENV === "production") {
 
 module.exports = {
     mode: mode,
+    output: {
+        assetModuleFilename: "images/[hash][ext][query]"
+    },
     module: {
         rules: [{
                 test: /\.s?css$/i,
@@ -22,7 +25,11 @@ module.exports = {
                 use: {
                     loader: "babel-loader",
                 }
-            }
+            },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
+            },
         ]
     },
     plugins: [new MiniCssExtractPlugin()],

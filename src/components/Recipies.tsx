@@ -19,6 +19,12 @@ const Recipes = () => {
         <div>
             <button onClick={updateCounter}>Update counter {counter}</button>
             <button onClick={resetCounter}>Reset counter</button>
+            <ul>
+                <li>Bitcoin</li>
+                <li>Ripple</li>
+                <li>Ethereum</li>
+            </ul>
+
         </div>
 
 
