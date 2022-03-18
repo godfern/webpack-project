@@ -17,7 +17,7 @@ module.exports = {
                 ],
             },
             {
-                test: /\.js$/,
+                test: /\.(js|jsx|ts|tsx)$/,
                 exclude: /node_modules/,
                 use: {
                     loader: "babel-loader",
@@ -26,6 +26,9 @@ module.exports = {
         ]
     },
     plugins: [new MiniCssExtractPlugin()],
+    resolve: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx']
+    },
     devtool: "inline-source-map",
     devServer: {
         static: {
